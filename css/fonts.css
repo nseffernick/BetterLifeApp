@@ -2,6 +2,11 @@
 
 /* font face */
 @font-face{
-    font-family: "Gothic";
+    font-family: "Nanum Gothic", sans-serif;
     src: '../fonts/NanumGothic-Regular.ttf';
+}
+
+@font-face{
+    font-family: "Architects Daughter", cursive;
+    src: '../fonts/ArchitectsDaughter-Regular.ttf';
 }
