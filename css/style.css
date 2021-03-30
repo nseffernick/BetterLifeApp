@@ -48,7 +48,6 @@
 .nav-link img{
     border-radius: 10%;
     max-width: 50px;
-    mix-blend-mode: multiply;
     height: auto;
     filter: brightness(1.3);
 }
