@@ -17,6 +17,8 @@
     </style>
 
     <base href="http://127.0.0.1:5500/"></head>
+
+     
     
 </head>
 
@@ -24,4 +26,65 @@
     <header class="header-area">
         <a class="BetterLifeApp" aria-current="page" href="">Better Life App</a>
     </header>
+
+    <form class="form">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Day</label>
+          <input type="date" id="datePickerId"/>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Today?
+              </label>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <div class="container1" id="exercise">
+            <button class="add_form_field" type="button">Add Exercise Activity &nbsp; 
+              <span style="font-size:16px; font-weight:bold;">+ </span>
+            </button>
+        </div>
+        <div class="container2" id="fun">
+            <button class="add_form_field" type="button">Add Fun Activity &nbsp; 
+              <span style="font-size:16px; font-weight:bold;">+ </span>
+            </button>
+        </div>
+        <div class="container3" id="sleep">
+          <button class="add_form_field" type="button">Add Sleep Activity &nbsp; 
+            <span style="font-size:16px; font-weight:bold;">+ </span>
+          </button>
+      </div>
+        <!--
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+      -->
+
+        <!---------------------------Calendar Script----------------------------->
+        <script>datePickerId.max = new Date().toISOString().split("T")[0];</script>
+
+        <script src="js\interactiveButton.js"></script>
 </body>

@@ -58,3 +58,66 @@
     text-decoration: none;
 }
 
+.container1 .container2 .container3 input[type=text] {
+    padding:5px 0px;
+    margin:5px 5px 5px 0px;
+    }
+    
+.add_form_field{
+    background-color: #1c97f3;
+    border: none;
+    color: white;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border:1px solid #186dad;
+    z-index: 5;
+}
+
+.input-activity{
+    border: 1px solid #1c97f3;
+    width: 150px;
+    height: 40px;
+    margin-bottom:14px;
+    padding-right: 100px;
+}
+.input-time{
+    border: 1px solid #1c97f3;
+    width: 50px;
+    height: 40px;
+    margin-bottom:14px;
+}
+
+.delete{
+    background-color: #fd1200;
+    border: none;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    display: inline;
+    font-size: 14px;
+    margin: 50px 1px;
+    cursor: pointer;
+    max-width: 70px;
+    max-height: 25px;
+}
+
+.row {
+    display: flex;
+  }
+  
+/* Create two equal columns that sits next to each other */
+.activity {
+    max-width: 150px;
+    flex: 50%;
+    padding: 20px;
+}
+.time {
+    max-width: 150px;
+    flex: 50%;
+    padding: 20px;
+}
