@@ -47,6 +47,7 @@ class schedule {
         for (let hIndex = 0; hIndex < height; index++) {
             for (let wIndex = 0; wIndex < width; index++) {
                 this.getElementAtIndex(wrapper, height, width);
+                
                 //do stuff to this element to make it pretty
             }
         }
