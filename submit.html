@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetterLifeApp Submit A Day</title>
+
+    <!-- Bootstrap css file link-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Custom css file-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nanum+Gothic&display=swap');
+    </style>
+
+    <base href="http://127.0.0.1:5500/"></head>
+
+     
+    
+</head>
+
+<body>
+  <header class="header-area">
+    <a class="BetterLifeApp" aria-current="page" href="">Better Life App</a>
+  </header>
+
+  <form class="form">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Day</label>
+        <input type="date" id="datePickerId"/>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Today?
+        </label>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div class="container1" id="exercise">
+      <button class="add_form_field" type="button">Add Exercise Activity &nbsp; 
+        <span style="font-size:16px; font-weight:bold;">+ </span>
+      </button>
+    </div>
+    <div class="container2" id="fun">
+      <button class="add_form_field" type="button">Add Fun Activity &nbsp; 
+        <span style="font-size:16px; font-weight:bold;">+ </span>
+      </button>
+    </div> 
+    <div class="container3" id="sleep">
+      <button class="add_form_field" type="button">Add Sleep Activity &nbsp; 
+        <span style="font-size:16px; font-weight:bold;">+ </span>
+      </button>
+  </div>
+  <!---------------------------Calendar Script----------------------------->
+  <script>datePickerId.max = new Date().toISOString().split("T")[0];</script>
+
+  <script src="js\interactiveButton.js"></script>
+</body>
