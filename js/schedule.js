@@ -1,58 +1,50 @@
 'use strict';
 import {Cell} from './cell.js';
-import {calendarCell} from './calendarCell.js';
-import {routineCell} from './routineCell.js';
+//import {calendarCell} from './calendarCell.js';
+//import {routineCell} from './routineCell.js';
 
 class schedule {
     constructor(height, width, wrapper) {
         this.height = height;
         this.width = width;
-        this.wrapper = wrapper;
+        this.wrapper = document.getElementById(wrapper);
 
         this.grid = [];
         this.initializeGrid(this.height, this.width, this.grid);
+        this.constructSchedule(this.wrapper, this.grid, this.height, this.width)
     }
 
     initializeGrid(height, width, grid) {
-        for (let hIndex = 0; hIndex < height; index++) {
-            grid.push([]);
-            for (let wIndex = 0; wIndex < width; index++) {
-                grid[hIndex][wIndex].push(new Cell());
+        for (let hIndex = 0; hIndex < height; hIndex++) {
+            grid.push([]);   
+        }
+        for (let hIndex = 0; hIndex < height; hIndex++) {
+            for (let wIndex = 0; wIndex < width; wIndex++) {
+                grid[hIndex].push(new Cell());
             }
         }
     }
 
     getElementAtIndex(hIndex, wIndex, wrapper) {
-        return wrapper.children[hIndex].children[wIndex];
+        return wrapper.children[hIndex+1].children[wIndex];
     }
 
-    addActivity(hIndex, wIndex, timeInterval, activity) {
-        while(timeInterval >= 1) {
-            timeInterval--;
-            if (wIndex < this.width) {
-                let aCell = this.grid[hIndex][wIndex];
-                aCell.assignActivity(activity);
-                wIndex++;
-            }
-            else {
-                hIndex++;
-                wIndex = 0;
-                let aCell = this.grid[hIndex][wIndex];
-                aCell.assignActivity(activity);
-            }
-        }
+    getCellAtIndex(height, width, grid) {
+        return grid[height][width];
     }
 
-    constructGrid(wrapper, height, width) {
-        for (let hIndex = 0; hIndex < height; index++) {
-            for (let wIndex = 0; wIndex < width; index++) {
-                this.getElementAtIndex(wrapper, height, width);
-                
-                //do stuff to this element to make it pretty
+    constructSchedule(wrapper, grid, height, width) {
+        for (let hIndex = 0; hIndex < height; hIndex++) {
+            for (let wIndex = 0; wIndex < width; wIndex++) {
+                let element = this.getElementAtIndex(hIndex, wIndex, wrapper);
+                let cellData = this.getCellAtIndex(hIndex, wIndex, grid);
+
+                element.className += " " + cellData.activity.name;
+                element.innerText = cellData.activity.name;
             }
         }
     }
 
 }
 
-
+const routineSchedule = new schedule(8, 19, "routine");

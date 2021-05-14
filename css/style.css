@@ -150,6 +150,46 @@
     text-align: center;
 }
 
-.routine-cell {
+/*.routine-cell {
     
+}
+
+.calendar-cell {
+
+}*/
+
+.exercise {
+    color: #ff0000;
+}
+
+.videogames {
+    color: #00ff00;
+}
+
+.social {
+    color: #0000ff;
+}
+
+.work {
+    color: #ffff00;
+}
+
+.guitar {
+    color: #ffa500;
+}
+
+.sleep {
+    color: #080808;
+}
+
+.passion {
+    color: #800080;
+}
+
+.chores {
+    color: #ffc0cb;
+}
+
+.nothing {
+    background-color: #ffffff;
 }
