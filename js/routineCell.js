@@ -14,7 +14,4 @@
     getDay() {
         return this.day;
     }
-
-    assignCell() {
-    }
 }
